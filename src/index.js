@@ -3,6 +3,6 @@ import 'babel-polyfill'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.less'
-import App from './App'
+import Router from './routes/index.js'
 
-ReactDOM.render(<App />, document.getElementById('container'))
+ReactDOM.render(<Router />, document.getElementById('container'))

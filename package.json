@@ -5,7 +5,7 @@
   "scripts": {
     "start": "parcel public/index.html --open",
     "clean": "rm -rf .cache/ dist/ build/",
-    "build": "cross-env NODE_ENV=production parcel build public/index.html -d build --public-url /app/",
+    "build": "cross-env NODE_ENV=production parcel build public/index.html -d build --public-url /wechatbind/ --no-source-maps --no-cache",
     "test": "jest",
     "test:watch": "npm test -- --watch",
     "test:coverage": "jest --coverage",
