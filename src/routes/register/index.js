@@ -44,7 +44,7 @@ export default class Register extends React.Component {
         this.setState({
             smsLoading: true
         })
-        Axios.get('http://47.98.144.11:8380/newFranchisee-server/app/sms/getCaptcha', {
+        Axios.get('http://fr.xianfengsg.com/newFranchisee-server/app/sms/getCaptcha', {
             params: {
                 mobile: form.frMobile
             }
@@ -86,7 +86,7 @@ export default class Register extends React.Component {
         }
         let that = this
 
-        Axios.post('http://47.98.144.11:8380/newFranchisee-server/xfsg/franchisee/wechatBind', form)
+        Axios.post('http://fr.xianfengsg.com/newFranchisee-server/xfsg/franchisee/wechatBind', form)
             .then(function (response) {
                 let data = response.data
                 if (data.code == 0) {
@@ -160,7 +160,7 @@ export default class Register extends React.Component {
                             placeholder="验证码"
                             onChange={(e) => this.fieldChange('captcha', e)}
                         />
-                        {smsLoading ? (<span>{countTime}s</span>) : (<span onClick={this.getSms}>获取验证</span>)}
+                        {smsLoading ? (<span>{countTime}s</span>) : (<span onClick={this.getSms}>获取验证码</span>)}
 
                     </div>
                     <button className={registerStyle.login} onClick={this.bindPhone}>绑 定</button>
